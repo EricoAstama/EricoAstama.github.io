@@ -16,4 +16,9 @@ $(document).ready(function () {
         "slow"
       );
     });
+    
+    window.addEventListener('load', function() {
+      var audio = document.getElementById('openingAudio');
+      audio.play();
+  });
 });
