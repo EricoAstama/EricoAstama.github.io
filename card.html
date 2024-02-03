@@ -14,6 +14,7 @@
             font-family: poppins, sans-serif;
             text-align: justify;
             margin: 0;
+            overflow-y: auto; /* Allow vertical scrolling */
         }
         .container {
             background-color: #eae2b7;
@@ -54,6 +55,15 @@
             text-decoration: none;
             color: black;
         }
+        .videos {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .video-container {
+            width: 100%; /* Full width */
+            margin-bottom: 10px; /* Add bottom margin for spacing */
+        }
         @media only screen and (max-width: 600px) {
             .container {
                 padding: 10px;/* Adjust padding for smaller screens */
@@ -69,6 +79,14 @@
             h1 {
                 margin: 10px; /* Adjust margin for smaller screens */
             }
+            .videos {
+                flex-wrap: wrap; /* Allow videos to wrap to the next line */
+            }
+            .video-container {
+                width: 100%; /* Full width for videos on smaller screens */
+                margin-right: 0; /* No margin on smaller screens */
+                margin-bottom: 10px; /* Add bottom margin for spacing */
+            }
         }
 
     </style>
@@ -80,7 +98,7 @@
     </audio>
     <div class="container">
         <a href="index.html">
-            <h1>Happy Birthday!</h1>
+            <h1>Happy Birthday!</h1><br>
             <p class="text-animation">Dear Aqilah Sayang,
             Happy birthday yang ke 22. <br><br> Semoga hari ini penuh dengan kebahagiaan dan cinta. 
             <br>Terima kasih karena selalu menjadi sumber kebahagiaan dalam hidup aku.
@@ -91,7 +109,21 @@
             <p class="text-animation"><span class="heart">❤️</span> Dari,
             <br>Erico</p>
         </a>
+
+        <div class="videos">
+            <div class="video-container">
+                <video controls autoplay loop width="100%">
+                    <source src="gif.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-container">
+                <video controls autoplay loop width="100%">
+                    <source src="trip.MOV" type="video/mp4">
+                </video>
+            </div>
+        </div>
     </div>
+
     <script>
         const startConfetti = () => { 
             setTimeout(() => {
@@ -102,7 +134,7 @@
         const stopConfetti = () => {
             setTimeout(() => {
                 confetti.stop();
-            }, 5000);
+            }, 10000);
         };
 
         startConfetti();
