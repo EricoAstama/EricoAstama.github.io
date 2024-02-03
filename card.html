@@ -60,20 +60,22 @@
                 height: 30vh;
             }
             .text-animation {
-                font-size: 14px;/* Adjust font s    ize for smaller screens */
+                font-size: 14px;/* Adjust font size for smaller screens */
             }
-            p{
+            p {
                 margin: 10px;
             }
-            h1{
+            h1 {
                 margin: 10px;
             }
-
         }
     </style>
     <script src="./confetti.js"></script>
 </head>
 <body>
+    <audio id="birthdayAudio" autoplay="autoplay">
+        <source src="yangdangil.mp3" type="audio/mpeg">
+    </audio>
     <div class="container">
         <a href="index.html">
             <h1>Happy Birthday!</h1>
@@ -89,20 +91,27 @@
         </a>
     </div>
     <script>
-        const start = ()  => { 
-            setTimeout(function(){
+        const startConfetti = () => { 
+            setTimeout(() => {
                 confetti.start();
-                }, 1000);
-            };
+            }, 1000);
+        };
 
-            const stop = ()  => {
-                setTimeout(function(){
-                    confetti.stop();
-                },5000)
-                }
+        const stopConfetti = () => {
+            setTimeout(() => {
+                confetti.stop();
+            }, 5000);
+        };
 
-            start();
-            stop();
+        startConfetti();
+        stopConfetti();
+
+        // Auto play audio after 0.49 seconds
+        setTimeout(() => {
+            const audio = document.getElementById('birthdayAudio');
+            audio.currentTime = 166; // Set the playback time to 166 seconds
+            audio.play();
+        }, 10);
     </script>
 </body>
 </html>
