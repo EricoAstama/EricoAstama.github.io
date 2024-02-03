@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fae1dd;
+            font-family: poppins, sans-serif;
+            text-align: justify;
+            margin: 0;
+        }
+        .container {
+            position: absolute;
+            background-color: #eae2b7;
+            width: 200px; /* Start with small size */
+            height: 100px; /* Start with small size */
+            box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            animation: expandContainer 1s forwards; /* Animation for expanding container */
+        }
+        @keyframes expandContainer {
+            from {
+                width: 200px; /* Initial small width */
+                height: 100px; /* Initial small height */
+            }
+            to {
+                width: 900px; /* Final bigger width */
+                height: 400px; /* Final bigger height */
+            }
+        }
+        .text-animation {
+            animation: fadeInText 1s forwards;
+            animation-delay: 1s; /* Delay text animation by 1 second */
+            opacity: 0; /* Initially hide text */
+        }
+        @keyframes fadeInText {
+            from {
+                opacity: 0; /* Start with opacity 0 */
+            }
+            to {
+                opacity: 1; /* End with opacity 1 */
+            }
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html">
+            <h1>Happy Birthday!</h1>
+            <p class="text-animation">Dear Aqilah Sayang,
+            Happy birthday yang ke 22. <br><br> Semoga hari ini penuh dengan kebahagiaan dan cinta. 
+            <br>Terima kasih karena selalu menjadi sumber kebahagiaan dalam hidup aku.
+            Semangat dalam menyelesaikan skripsimu ya, Aku yakin kamu pasti bisa melaluinya dengan baik. 
+            Aku selalu mendukungmu sepenuhnya. Kamu hebat!
+            Semoga di umur 22 ini di berikan kemudahan dan kelancaran di segala urusanmu.
+            <br><br>Untuk tahun depan, semoga kita bisa bersama dan merayakan ulang tahunmu bersama-sama ya!.</p> 
+            <p class="text-animation"><span class="heart">❤️</span> Dari,
+                <br>Erico</p>
+        </a>
+    </div>
+</body>
+</html>
