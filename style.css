@@ -20,7 +20,7 @@ body {
   position: relative;
   top: 50px;
   cursor: pointer;
-  animation: up 3s linear infinite;
+  animation: up 4s linear infinite;
 }
 
 /* Style the envelope and the card */
@@ -138,7 +138,7 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
   bottom: 50%;
   margin-left: -12px;
-  animation: scale 3s linear infinite;
+  animation: scale 4s linear infinite;
   z-index: -1;
 }
 
