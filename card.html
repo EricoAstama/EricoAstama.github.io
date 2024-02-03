@@ -18,10 +18,13 @@
         .container {
             position: absolute;
             background-color: #eae2b7;
-            width: 200px; /* Start with small size */
-            height: 100px; /* Start with small size */
+            width: 100%; /* Adjusted for responsiveness */
+            max-width: 900px; /* Maximum width */
+            height: 100%; /* Adjusted for responsiveness */
+            max-height: 400px; /* Maximum height */
             box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
             padding: 20px;
+            margin: 20px; /* Added margin to create space from edges */
             animation: expandContainer 1s forwards; /* Animation for expanding container */
         }
         @keyframes expandContainer {
@@ -30,8 +33,8 @@
                 height: 100px; /* Initial small height */
             }
             to {
-                width: 900px; /* Final bigger width */
-                height: 400px; /* Final bigger height */
+                width: 100%; /* Final bigger width */
+                height: 100%; /* Final bigger height */
             }
         }
         .text-animation {
@@ -51,6 +54,25 @@
             text-decoration: none;
             color: black;
         }
+
+        /* Responsive adjustments for iPhone XR */
+        @media only screen and (max-width: 414px) {
+            .container {
+                padding: 25px;
+                margin: 10px; /* Adjust margin for smaller screens */
+            }
+            .text-animation {
+                font-size: 12px;/* Adjust font size for smaller screens */
+            }
+            p{
+                margin: 10px;
+                font-weight: bold;
+            }
+            h1{
+                margin: 10px;
+            }
+
+        }
     </style>
 </head>
 <body>
@@ -65,7 +87,7 @@
             Semoga di umur 22 ini di berikan kemudahan dan kelancaran di segala urusanmu.
             <br><br>Untuk tahun depan, semoga kita bisa bersama dan merayakan ulang tahunmu bersama-sama ya!.</p> 
             <p class="text-animation"><span class="heart">❤️</span> Dari,
-                <br>Erico</p>
+            <br>Erico</p>
         </a>
     </div>
 </body>
