@@ -106,12 +106,24 @@
         startConfetti();
         stopConfetti();
 
-        // Auto play audio after 0.49 seconds
-        setTimeout(() => {
-            const audio = document.getElementById('birthdayAudio');
-            audio.currentTime = 166; // Set the playback time to 166 seconds
-            audio.play();
-        }, 10);
+        // Fade in audio
+        const audio = document.getElementById('birthdayAudio');
+        audio.volume = 0; // Start with volume 0
+        audio.play();
+
+        const fadeInAudio = () => {
+            const intervalId = setInterval(() => {
+                if (audio.volume < 1) {
+                    audio.volume += 0.1; // Increase volume gradually
+                } else {
+                    clearInterval(intervalId);
+                }
+            }, 100); // Adjust the time interval for smoother fade-in effect
+        };
+
+        // Auto play audio from 2 minutes and 45 seconds
+        setTimeout(fadeInAudio, 490); // Start fading in after 490 milliseconds
+        audio.currentTime = 165; // Set the playback time to 165 seconds (2 minutes and 45 seconds)
     </script>
 </body>
 </html>
