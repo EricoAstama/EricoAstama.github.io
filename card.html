@@ -16,32 +16,32 @@
             margin: 0;
         }
         .container {
-            position: absolute;
             background-color: #eae2b7;
-            width: 100%; /* Adjusted for responsiveness */
             max-width: 900px; /* Maximum width */
-            height: 100%; /* Adjusted for responsiveness */
             max-height: 400px; /* Maximum height */
             box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
             padding: 20px;
             margin: 20px; /* Added margin to create space from edges */
-            animation: expandContainer 1s forwards; /* Animation for expanding container */
+            animation: expandContainer 2s forwards; /* Animation for expanding container */
         }
         @keyframes expandContainer {
             from {
+                opacity: 0;
                 width: 200px; /* Initial small width */
                 height: 100px; /* Initial small height */
             }
             to {
                 width: 100%; /* Final bigger width */
                 height: 100%; /* Final bigger height */
+                opacity: 1;
             }
         }
         .text-animation {
-            animation: fadeInText 1s forwards;
+            animation: fadeInText 2s forwards;
             animation-delay: 1s; /* Delay text animation by 1 second */
             opacity: 0; /* Initially hide text */
         }
+        
         @keyframes fadeInText {
             from {
                 opacity: 0; /* Start with opacity 0 */
@@ -56,17 +56,16 @@
         }
 
         /* Responsive adjustments for iPhone XR */
-        @media only screen and (max-width: 414px) {
+        @media only screen and (max-width: 600px) {
             .container {
-                padding: 25px;
-                margin: 10px; /* Adjust margin for smaller screens */
+                width: 10%;
+                height: 30vh;
             }
             .text-animation {
-                font-size: 12px;/* Adjust font size for smaller screens */
+                font-size: 14px;/* Adjust font s    ize for smaller screens */
             }
             p{
                 margin: 10px;
-                font-weight: bold;
             }
             h1{
                 margin: 10px;
